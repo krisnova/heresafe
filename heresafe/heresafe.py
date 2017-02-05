@@ -27,7 +27,7 @@ import ConfigParser
 import subprocess
 
 # Execution Parameters
-version = "1.0.2"
+version = "1.0.3"
 verbose = True  # Will echo log lines to standard out
 log = False  # Will write logs to log file
 show_errors = True
@@ -262,11 +262,11 @@ def action_check():
     if ssid == "":
         out("Hrmm.. Missing SSID. Not connected, or problem with airport.")
         return
-    out("Hrmm.. It looks like you are connected to the SSID " + send_on_ssid)
+    out("Hrmm.. It looks like you are connected to the SSID " + ssid)
 
     # Check if are on the right SSID
     if ssid != send_on_ssid.lower():
-        out("Okay.. It looks like you aren't connected to SSID " + ssid)
+        out("Okay.. It looks like you aren't connected to SSID " + send_on_ssid)
         return
     out("Okay.. So you are connected to SSID " + ssid + ". You probably are somewhere safe!")
 
