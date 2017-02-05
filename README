@@ -1,0 +1,1 @@
+heresafe is a Python utility that will send an arbitrary text message to a configured number when a script runs and detects you are connected to a certain SSID.
