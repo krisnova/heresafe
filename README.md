@@ -9,10 +9,31 @@ Inspiration for heresafe came from my inability to remember to text my partner w
 
 You **must** have a valid Google Voice account. After you have created one at [voice.google.com](https://voice.google.com) you can proceed to follow the following installation steps:
  
-```
+```bash
 pip install heresafe
 heresafe configure
 ```
+
+```
+kris-nova:heresafe kris$ heresafe configure
+heresafe 1.0.2:  In order to use heresafe, you must have a valid Google voice account.
+Google Voice Email [kris@nivenly.com]: 
+Google Voice Password [*]: 
+Send Message To # [+13038675309]: 
+Send Message Body [*]: Hey baby, Just got to work safe. I love you!
+Send Once Per (day|nday|hour|nhour)[day]: 
+Send Once You Connect to SSID [office-wifi]:
+heresafe 1.0.2:  Writing config to filesystem
+How often should we check? (in minutes) [15]: 
+heresafe 1.0.2:  Configuring crontab
+heresafe 1.0.2:  Configuration complete!
+heresafe 1.0.2:  Modified your crontab. You can edit it with crontab -e, or remove it with crontab -r
+heresafe 1.0.2:  All configuration for heresafe is stored in PLAINTEXT in ~/.heresafe
+heresafe 1.0.2:  Bye!
+kris-nova:heresafe kris$ 
+```
+
+
 
 # heresafe configure
 
