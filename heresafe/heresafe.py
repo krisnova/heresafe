@@ -27,7 +27,7 @@ import ConfigParser
 import subprocess
 
 # Execution Parameters
-version = "1.0.1"
+version = "1.0.2"
 verbose = True  # Will echo log lines to standard out
 log = False  # Will write logs to log file
 show_errors = True

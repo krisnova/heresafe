@@ -7,6 +7,8 @@ Inspiration for heresafe came from my inability to remember to text my partner w
 
 # Installing
 
+You **must** have a valid Google Voice account. After you have created one at [voice.google.com](https://voice.google.com) you can proceed to follow the following installation steps:
+ 
 ```
 pip install heresafe
 heresafe configure
