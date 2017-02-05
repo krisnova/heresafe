@@ -27,7 +27,7 @@ import ConfigParser
 import subprocess
 
 # Execution Parameters
-version = "1.0.0"
+version = "1.0.1"
 verbose = True  # Will echo log lines to standard out
 log = False  # Will write logs to log file
 show_errors = True
@@ -222,7 +222,7 @@ def action_configure():
             lineToWrite = cron_line
         new += lineToWrite + "\n"
     if existing == "" or existing == "\n":
-        new = "MAILTO=''\n" + "PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin\n\n" + cron_line
+        new = 'MAILTO=""\n' + "PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin\n\n" + cron_line
 
     last = open(os.path.expanduser('~') + "/.heresafe/crontab", "w")
     last.write(new)
