@@ -10,7 +10,7 @@ with open(path.join(here, 'README'), encoding='utf-8') as f:
 
 setup(
     name='heresafe',
-    version='1.0.3',
+    version='1.0.4',
     description='heresafe is a Python utility that will send an arbitrary text message to a configured number when a script runs and detects you are connected to a certain SSID.',
     long_description=long_description,
     url='https://github.com/kris-nova/heresafe',

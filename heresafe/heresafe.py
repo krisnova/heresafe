@@ -27,7 +27,7 @@ import ConfigParser
 import subprocess
 
 # Execution Parameters
-version = "1.0.3"
+version = "1.0.4"
 verbose = True  # Will echo log lines to standard out
 log = False  # Will write logs to log file
 show_errors = True
@@ -62,7 +62,7 @@ Author: Kris Nova <kris@nivenly.com>
     \033[95m[configure]\033[0m Will configure heresafe to run on your system.
         heresafe configure
 
-    \033[95m[check]\033[0m Will run heresafe, and check if you there safe! Will send a text if needed.
+    \033[95m[check]\033[0m Will run heresafe, and check if you're there safe! Will send a text if needed.
         heresafe check
 
 ''' % version
