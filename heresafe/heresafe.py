@@ -23,8 +23,16 @@ import readline
 from subprocess import Popen, PIPE
 from googlevoice import Voice
 import datetime
-import ConfigParser
+try:
+    from ConfigParser import ConfigParser
+except ImportError:
+    from configparser import ConfigParser
 import subprocess
+try:
+    raw_input = raw_input
+except NameError:
+    raw_input = input
+
 
 # Execution Parameters
 version = "1.0.4"
@@ -100,7 +108,7 @@ def main():
         if firstarg == "-h" or firstarg == "--help":
             sys.exit(1)
     except:
-        print description
+        print(description)
         sys.exit(1)
 
     ensure_datastore()
@@ -125,14 +133,14 @@ def main():
             exc_type, exc_obj, exc_tb = sys.exc_info()
             fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
             print(exc_type, fname, exc_tb.tb_lineno)
-        print description
+        print(description)
         sys.exit(1)
     except AttributeError:
         if show_errors:
-            print sys.exc_info()
+            print(sys.exc_info())
     except:
         if show_errors:
-            print sys.exc_info()
+            print(sys.exc_info())
     out("Bye!")
 
 
@@ -142,7 +150,7 @@ def action_configure():
     Will configure heresafe to run on your system.
     '''
     load_config()
-    config = ConfigParser.ConfigParser()
+    config = ConfigParser()
     out("In order to use heresafe, you must have a valid Google voice account.")
     config.add_section('voice')
     # Google Voice Email
@@ -365,7 +373,7 @@ def ensure_datastore():
     Will ensure there is a file ~/.heresafe/config has been created
     '''
     if not os.path.exists(os.path.expanduser('~') + "/.heresafe"):
-        print "Setting up heresafe datastore: ~/.heresafe"
+        print("Setting up heresafe datastore: ~/.heresafe")
         os.makedirs(os.path.expanduser('~') + "/.heresafe")
     if not os.path.exists(os.path.expanduser('~') + "/.heresafe/last"):
         f = open(os.path.expanduser('~') + "/.heresafe/last", 'w')
@@ -386,7 +394,7 @@ def out(message):
     with open(os.path.expanduser('~') + "/.heresafe/log", 'a') as log:
         log.write(message + "\n")
     if verbose:
-        print withcolor
+        print(withcolor)
 
 # Botstrap the program
 if __name__ == "__main__":
